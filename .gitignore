@@ -1,0 +1,13 @@
+*.zip
+*.exe
+*.dll
+*.pdb
+*.bundle
+*.patch
+*.diff
+*.dxil
+*.cso
+src/
+work/
+data/
+output/
