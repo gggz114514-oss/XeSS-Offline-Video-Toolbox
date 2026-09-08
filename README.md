@@ -4,12 +4,22 @@ Windows 离线视频超分与 2× 插帧工具。解压即用，内置图形界�
 
 ## 下载与启动
 
-1. 打开 [最新版本](https://github.com/gggz114514-oss/XeSS-Offline-Video-Toolbox/releases/latest)，下载 **XeSS-Offline-Windows-x64-v1.0.0.zip**，不要下载 GitHub 自动生成的 Source code。
+1. 打开 [最新版本](https://github.com/gggz114514-oss/XeSS-Offline-Video-Toolbox/releases/latest)，下载 **XeSS-Offline-Windows-x64-v1.0.1.zip**，不要下载 GitHub 自动生成的 Source code。
 2. 完整解压到有足够空间、可写的本地文件夹，双击 **XeSS-Offline.exe**。支持中文、空格路径和任意盘符。
 3. 选择原视频、处理模式、算法路线、倍率和编码器，点击“开始处理”。原片不会被覆盖。
 4. 等待校验完成，点击“播放成片”。遇到问题，查看“运行日志”或点击“环境检查”。
 
 默认输出在 `output`，任务与缓存放在软件目录的 `data`。不要直接在压缩包里运行，不要在处理时清理缓存。更新时解压到新文件夹即可，旧版和原视频可以保留。
+
+## 1.0.1 更新
+
+新增 **Arc A 系列兼容模式**，支持 GPU Block、GPU DIS、AMD 光流的超分、插帧及一条龙，默认关闭。A770 等显卡出现整幅绿/紫条带或偏色时开启：先在 GPU 转为 RGBA 再跨接口共享，绕过 NV12 直接共享。这不是“抗竖纹”滤镜，二者解决的问题不同。
+
+CPU DIS 和 Intel 视频接口不显示此选项。正常设备无需开启；兼容路径增加一次 GPU 颜色转换，不通过 CPU 回读绕行。
+
+同时修复中文安装目录下 GPU 路线的 AI 深度模型加载失败。算法、深度模型和默认特效保持不变。
+
+从 1.0.0 更新请退出旧版，下载完整 1.0.1 ZIP，解压到新目录。不要混入旧 runtime、诊断 candidate 或 ComfyUI Runtime 包；此项目的 `git pull` 只更新说明文档，不会更新本地便携程序。
 
 ## 选择路线
 
@@ -41,7 +51,7 @@ GPU 路线主要支持 8-bit SDR H.264/HEVC 4:2:0、固定帧率视频；HDR、�
 
 便携包内置 Python、OpenVINO、模型、FFmpeg/ffprobe、自包含桌面运行库和固定版 WebView2；没有实时捕获、OBS/WGC 前端或 ComfyUI 节点。联网不是本地处理的必要条件。
 
-验证范围见 [验收摘要](VALIDATION.md)。首版已覆盖多路线短片、1200 帧连续处理及取消/关窗；不宣称电影时长、所有驱动、所有显卡全覆盖。
+验证范围见 [验收摘要](https://github.com/gggz114514-oss/XeSS-Offline-Video-Toolbox/blob/main/VALIDATION.md)。新补丁按短片矩阵和搬迁验证验收；首版的 1200 帧测试单独保留历史记录，不冒充新构建的长跑成绩。不宣称电影时长、所有驱动、所有显卡全覆盖。
 
 ## 项目与许可
 
