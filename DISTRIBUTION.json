@@ -1,0 +1,27 @@
+{
+  "target": "offline",
+  "asset": "XeSS-Offline-Windows-x64-v1.0.2.zip",
+  "bytes": 820515105,
+  "sha256": "03112dad8809b32d4f8f105cccfc1a199d57be8a30dfb4977199065394108d93",
+  "file_count": 5535,
+  "unpacked_bytes": 1841997800,
+  "manifest": "portable-manifest.json",
+  "payload_changes": "release metadata, release docs, offline version label only; tested binaries unchanged",
+  "assets": [
+    {
+      "name": "XeSS-Offline-Windows-x64-v1.0.2.zip",
+      "bytes": 820515105,
+      "sha256": "03112dad8809b32d4f8f105cccfc1a199d57be8a30dfb4977199065394108d93"
+    },
+    {
+      "name": "XeSS-Offline-Windows-x64-v1.0.2.zip.sha256",
+      "bytes": 103,
+      "sha256": "e7078c5ee4214b7db040f1ab5c7d8ddeee6632f521049083a018cd940572a491"
+    }
+  ],
+  "version": "1.0.2",
+  "tested_hardware": [
+    "Intel Arc B580"
+  ],
+  "new_cross_vendor_validation": false
+}
